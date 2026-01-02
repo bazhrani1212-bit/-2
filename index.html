@@ -1,455 +1,136 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>الفهم القرائي لعلوم الصف السادس | إعداد المعلمة بدرية محمد الزهراني</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الفهم القرائي – علوم الصف السادس</title>
+
 <style>
-:root{
-  --bg:#f9fafb;
-  --card:#ffffff;
-  --stroke:#e5e7eb;
-  --text:#111827;
-  --muted:#6b7280;
-  --accent:#2563eb;
-  --good:#16a34a;
-  --bad:#dc2626;
-  --shadow:0 10px 25px rgba(0,0,0,.08);
-  --r:18px;
+body{
+  font-family: "Cairo","Tajawal",sans-serif;
+  background:#f9fafb;
+  margin:0;
+  color:#111;
 }
-*{box-sizing:border-box}
-body{margin:0;font-family:"Tajawal","Cairo",system-ui,Arial,sans-serif;color:var(--text);background:var(--bg);min-height:100vh}
-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--stroke)}
-.topbar{max-width:1100px;margin:0 auto;padding:12px 16px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-.brand{display:flex;gap:12px;align-items:center}
-.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg, rgba(37,99,235,.95), rgba(22,163,74,.75));border:1px solid rgba(0,0,0,.06);box-shadow:0 10px 22px rgba(37,99,235,.12)}
-h1{margin:0;font-size:15px}
-.sub{color:#1f2937;font-size:12px;margin-top:6px;font-weight:700}
-.sub span{color:var(--accent)}
-.right{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.pill{border:1px solid var(--stroke);background:#fff;border-radius:999px;padding:10px 12px;font-size:12px;color:var(--muted)}
-.pill b{color:var(--text)}
-.btn{border:1px solid var(--stroke);background:#fff;color:var(--text);padding:10px 12px;border-radius:999px;cursor:pointer;font-weight:800;font-size:12px}
-.btn.primary{background:linear-gradient(135deg, rgba(37,99,235,.95), rgba(37,99,235,.70));border-color:rgba(37,99,235,.25);color:#fff}
-.btn.good{background:linear-gradient(135deg, rgba(22,163,74,.95), rgba(22,163,74,.70));border-color:rgba(22,163,74,.25);color:#fff}
-.btn.bad{background:linear-gradient(135deg, rgba(220,38,38,.95), rgba(220,38,38,.70));border-color:rgba(220,38,38,.25);color:#fff}
-.wrap{max-width:1100px;margin:0 auto;padding:16px}
-.grid{display:grid;grid-template-columns:360px 1fr;gap:14px;margin-top:14px}
-@media (max-width:980px){.grid{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--stroke);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
-.hd{padding:14px 16px;border-bottom:1px solid var(--stroke);display:flex;align-items:center;justify-content:space-between;gap:10px}
-.bd{padding:16px}
-label{display:block;color:var(--muted);font-size:12px;margin:10px 0 6px}
-input,select{width:100%;padding:12px 12px;border-radius:14px;border:1px solid var(--stroke);background:#fff;color:var(--text);outline:none}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-@media (max-width:520px){.row{grid-template-columns:1fr}}
-.story{border:1px dashed #d1d5db;background:#f8fafc;border-radius:16px;padding:14px;line-height:1.9;white-space:pre-wrap}
-.q{margin-top:12px;border:1px solid var(--stroke);background:#fff;border-radius:16px;padding:14px}
-.q h3{margin:0 0 10px;font-size:13px}
-.opt{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:14px;border:1px solid #e5e7eb;background:#f9fafb;cursor:pointer}
-.opt:hover{border-color:#cbd5e1}
-.opt.good{border-color:rgba(22,163,74,.45);background:rgba(22,163,74,.10)}
-.opt.bad{border-color:rgba(220,38,38,.45);background:rgba(220,38,38,.10)}
-.bullet{width:22px;height:22px;border-radius:999px;border:1px solid #cbd5e1;display:grid;place-items:center;font-weight:900;font-size:12px;margin-top:2px}
-.muted{color:var(--muted)}
-.toast{position:fixed;right:16px;bottom:16px;z-index:50;display:none;max-width:min(420px, calc(100vw - 32px));
-  padding:12px 14px;border-radius:16px;border:1px solid var(--stroke);background:#fff;box-shadow:var(--shadow)}
-.toast.show{display:block}
-.overlay{position:fixed;inset:0;display:none;place-items:center;z-index:80;background:rgba(0,0,0,.35)}
-.overlay.show{display:grid}
-.celebrate{width:min(520px, calc(100vw - 32px));border-radius:22px;background:#fff;box-shadow:var(--shadow);padding:18px;text-align:center}
-.celebrate h2{margin:0 0 8px;font-size:18px}
-.celebrate p{margin:0 0 12px;color:var(--muted);line-height:1.8}
-footer{text-align:center;margin:28px 0 12px;font-size:13px;color:var(--muted)}
-canvas#confetti{position:fixed;inset:0;z-index:79;pointer-events:none;display:none}
-canvas#confetti.show{display:block}
+header{
+  background:#ffffff;
+  border-bottom:1px solid #ddd;
+  padding:15px;
+  text-align:center;
+}
+header h1{margin:0;font-size:20px}
+header p{margin:5px 0 0;font-weight:700;color:#2563eb}
+
+main{max-width:900px;margin:20px auto;padding:15px}
+.card{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:15px;
+  margin-bottom:15px;
+}
+select{
+  width:100%;
+  padding:10px;
+  font-size:15px;
+}
+.story{
+  background:#f8fafc;
+  border:1px dashed #ccc;
+  padding:15px;
+  margin-top:10px;
+  line-height:1.9;
+}
+.question{
+  margin-top:12px;
+}
+.option{
+  padding:8px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  margin-top:6px;
+  cursor:pointer;
+}
+.option:hover{background:#f1f5f9}
+footer{
+  text-align:center;
+  margin:20px;
+  font-size:13px;
+  color:#666;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-  <div class="topbar">
-    <div class="brand">
-      <div class="logo"></div>
-      <div>
-        <h1>الفهم القرائي لعلوم الصف السادس</h1>
-        <div class="sub">إعداد المعلمة: <span>بدرية محمد الزهراني</span></div>
-      </div>
-    </div>
-    <div class="right">
-      <div class="pill">الزوار: <b id="visits">—</b></div>
-      <div class="pill">اليوم/التاريخ: <b id="todayTop">—</b></div>
-    </div>
-  </div>
+  <h1>الفهم القرائي لعلوم الصف السادس</h1>
+  <p>إعداد المعلمة: بدرية محمد الزهراني</p>
 </header>
 
-<div class="wrap">
-  <div class="grid">
-    <section class="card" id="studentPanel">
-      <div class="hd">
-        <b>بوابة الدخول</b>
-        <span class="muted" id="today">—</span>
-      </div>
-      <div class="bd">
-        <label>اسم الطالب/ة (ثلاثي)</label>
-        <input id="studentName" placeholder="مثال: سارة أحمد علي"/>
+<main>
 
-        <label>اسم الدرس</label>
-        <select id="lessonSelect"></select>
-
-        <div class="row">
-          <div>
-            <label>رابط صفحة الطالبة (اختياري)</label>
-            <input id="studentLink" readonly/>
-          </div>
-          <div>
-            <label>حالة الحفظ على الجهاز</label>
-            <input id="localState" readonly value="—"/>
-          </div>
-        </div>
-
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
-          <button class="btn good" id="startBtn">ابدأ الدرس</button>
-          <button class="btn primary" id="saveBtn" disabled>اعتماد + حفظ النتيجة</button>
-          <button class="btn bad" id="clearBtn" disabled>مسح حفظ الدرس</button>
-        </div>
-
-        <div style="margin-top:12px" class="muted">
-          ✅ يتم حفظ الإجابات تلقائيًا في جهاز الطالبة.<br/>
-          ✅ عند الاعتماد يتم حفظ النتيجة في Google Sheet.
-        </div>
-      </div>
-    </section>
-
-    <section class="card" id="lessonPanel">
-      <div class="hd">
-        <b id="lessonTitle">—</b>
-        <span class="muted">النقاط: <b id="pts">0</b> / <b id="maxPts">0</b></span>
-      </div>
-      <div class="bd">
-        <div class="story" id="story">اختاري درسًا ثم اضغطي (ابدأ الدرس).</div>
-        <div id="questions"></div>
-      </div>
-    </section>
-  </div>
-
-  <footer>© إعداد وتنفيذ المعلمة بدرية محمد الزهراني – الفهم القرائي لعلوم الصف السادس</footer>
+<div class="card">
+  <label><b>اختاري الدرس:</b></label>
+  <select id="lessonSelect"></select>
 </div>
 
-<div class="toast" id="toast"></div>
-<canvas id="confetti"></canvas>
-
-<div class="overlay" id="overlay">
-  <div class="celebrate">
-    <h2>🎉 ممتاز! حصلتِ على الدرجة الكاملة 🎉</h2>
-    <p id="celebrateText">أحسنتِ… واصلي التألق 🌟</p>
-    <button class="btn good" id="closeCelebrate">إغلاق</button>
-  </div>
+<div class="card" id="lessonBox" style="display:none">
+  <h3 id="lessonTitle"></h3>
+  <div class="story" id="lessonStory"></div>
+  <div id="questions"></div>
 </div>
 
-<!-- ✅ ملف الدروس (كامل بدون قص) -->
-<script src="./lessons.js?v=20260103"></script>
+</main>
 
+<footer>
+© إعداد وتنفيذ المعلمة بدرية محمد الزهراني
+</footer>
+
+<!-- ملف الدروس (كسر كاش مدمج) -->
+<script src="./lessons.js?v=final-2026"></script>
 
 <script>
-/* ✅ ضعي هنا رابط Apps Script الخاص بك */
-const GAS_ENDPOINT = "https://script.google.com/macros/s/AKfycbznaXBg9dlbwXDlCQIW9b6b-0Hnin9foReBdUpkPFHjjGbz_5gk24WQmG8SgtulF8Oh/exec";
-const SITE_KEY = "READING_SCIENCE_G6";
+const LESSONS = window.LESSONS || [];
 
-/* ✅ جميع الدروس تُحمّل من lessons.js */
-const LESSONS = (window.LESSONS || []);
+const sel = document.getElementById("lessonSelect");
+const box = document.getElementById("lessonBox");
+const title = document.getElementById("lessonTitle");
+const story = document.getElementById("lessonStory");
+const qs = document.getElementById("questions");
 
-const $ = s => document.querySelector(s);
-function toast(msg){
-  const t = $("#toast");
-  t.textContent = msg;
-  t.classList.add("show");
-  clearTimeout(toast._t);
-  toast._t = setTimeout(()=>t.classList.remove("show"), 2400);
+if(!LESSONS.length){
+  alert("❌ لم يتم تحميل الدروس – تأكدي من ملف lessons.js");
 }
 
-/* إرسال POST */
-function postJSON(obj){
-  const payload = JSON.stringify(obj);
-  if(navigator.sendBeacon){
-    try{ navigator.sendBeacon(GAS_ENDPOINT, payload); return Promise.resolve(true); }catch(e){}
-  }
-  return fetch(GAS_ENDPOINT, {method:"POST", mode:"no-cors", body: payload})
-    .then(()=>true).catch(()=>false);
-}
-
-/* JSONP لقراءة العداد (stats) */
-function loadJSONP(params, callback){
-  const cb = "cb_" + Math.random().toString(16).slice(2);
-  window[cb] = (data)=>{ try{ callback(data); } finally{ delete window[cb]; script.remove(); } };
-  params.callback = cb;
-  const qs = new URLSearchParams(params).toString();
-  const script = document.createElement("script");
-  script.src = GAS_ENDPOINT + "?" + qs;
-  document.body.appendChild(script);
-}
-
-/* حفظ محلي */
-function keyProgress(student, lessonId){ return `G6_READ_${student}_${lessonId}`; }
-function saveProgress(student, lessonId, answers){ localStorage.setItem(keyProgress(student, lessonId), JSON.stringify(answers)); }
-function loadProgress(student, lessonId){ try{ return JSON.parse(localStorage.getItem(keyProgress(student, lessonId)) || "null"); } catch{ return null; } }
-function clearProgress(student, lessonId){ localStorage.removeItem(keyProgress(student, lessonId)); }
-
-/* جرس الخطأ */
-function playErrorBeep(){
-  try{
-    const ctx = new (window.AudioContext||window.webkitAudioContext)();
-    const o = ctx.createOscillator(); const g = ctx.createGain();
-    o.type="square"; o.frequency.value=220; g.gain.value=0.06;
-    o.connect(g); g.connect(ctx.destination);
-    o.start(); setTimeout(()=>{o.stop(); ctx.close();}, 160);
-  }catch(e){}
-}
-
-/* احتفال */
-$("#closeCelebrate").addEventListener("click", ()=>{
-  $("#overlay").classList.remove("show");
-  stopConfetti();
+LESSONS.forEach((l,i)=>{
+  const o=document.createElement("option");
+  o.value=i;
+  o.textContent=l.title;
+  sel.appendChild(o);
 });
-let confettiAnim=null;
-function startConfetti(){
-  const c=$("#confetti"); c.classList.add("show");
-  const ctx=c.getContext("2d");
-  const resize=()=>{ c.width=innerWidth; c.height=innerHeight; };
-  resize(); window.addEventListener("resize", resize);
 
-  const parts = Array.from({length:160}, ()=>({
-    x: Math.random()*c.width,
-    y: Math.random()*-c.height,
-    vy: 2+Math.random()*4,
-    vx: -1+Math.random()*2,
-    r: 2+Math.random()*4,
-    a: Math.random()*Math.PI*2
-  }));
-
-  const draw=()=>{
-    ctx.clearRect(0,0,c.width,c.height);
-    parts.forEach(p=>{
-      p.x += p.vx; p.y += p.vy; p.a += 0.08;
-      if(p.y > c.height+20){ p.y = -20; p.x = Math.random()*c.width; }
-      ctx.save();
-      ctx.translate(p.x,p.y);
-      ctx.rotate(p.a);
-      ctx.fillRect(-p.r, -p.r, p.r*2, p.r*2);
-      ctx.restore();
+sel.addEventListener("change",()=>{
+  const L = LESSONS[sel.value];
+  if(!L) return;
+  box.style.display="block";
+  title.textContent = L.title;
+  story.textContent = L.story;
+  qs.innerHTML="";
+  L.questions.forEach((q,i)=>{
+    const d=document.createElement("div");
+    d.className="question";
+    d.innerHTML=`<b>${i+1}) ${q.q}</b>`;
+    q.opts.forEach(opt=>{
+      const o=document.createElement("div");
+      o.className="option";
+      o.textContent=opt;
+      d.appendChild(o);
     });
-    confettiAnim=requestAnimationFrame(draw);
-  };
-  draw();
-}
-function stopConfetti(){
-  const c=$("#confetti");
-  c.classList.remove("show");
-  if(confettiAnim) cancelAnimationFrame(confettiAnim);
-  confettiAnim=null;
-}
-function celebrate(student, lessonTitle){
-  $("#celebrateText").textContent = `👏 أحسنتِ يا ${student}! أكملتِ درس (${lessonTitle}) بالدرجة الكاملة.`;
-  $("#overlay").classList.add("show");
-  startConfetti();
-}
-
-/* حالة الدرس */
-const state = { lesson:null, answers:[], points:0 };
-
-function fillLessons(){
-  const sel = $("#lessonSelect");
-  sel.innerHTML = "";
-  LESSONS.forEach(L=>{
-    const op = document.createElement("option");
-    op.value = L.id; op.textContent = L.title;
-    sel.appendChild(op);
+    qs.appendChild(d);
   });
-}
-
-function updateStudentLink(){
-  const name = $("#studentName").value.trim();
-  const lessonId = $("#lessonSelect").value;
-  const url = new URL(location.href);
-  url.searchParams.set("student", name || "");
-  url.searchParams.set("lesson", lessonId || "");
-  $("#studentLink").value = url.toString();
-  $("#localState").value = (name && lessonId && localStorage.getItem(keyProgress(name, lessonId))) ? "✅ محفوظ" : "—";
-}
-$("#studentName").addEventListener("input", updateStudentLink);
-$("#lessonSelect").addEventListener("change", updateStudentLink);
-
-function renderLesson(student, lesson){
-  state.lesson = lesson;
-  state.answers = lesson.questions.map(()=>({selected:null, correct:false}));
-  state.points = 0;
-
-  $("#lessonTitle").textContent = lesson.title;
-  $("#story").textContent = lesson.story;
-  $("#maxPts").textContent = String(lesson.questions.length);
-  $("#pts").textContent = "0";
-
-  const saved = loadProgress(student, lesson.id);
-  if(saved && Array.isArray(saved)){
-    saved.forEach((sel, i)=>{
-      if(typeof sel === "number"){
-        state.answers[i].selected = sel;
-        state.answers[i].correct = (sel === lesson.questions[i].a);
-      }
-    });
-    state.points = state.answers.filter(a=>a.correct).length;
-    $("#pts").textContent = String(state.points);
-    $("#localState").value = "✅ محفوظ";
-  } else {
-    $("#localState").value = "—";
-  }
-
-  const qs = $("#questions");
-  qs.innerHTML = "";
-
-  lesson.questions.forEach((qq, idx)=>{
-    const box = document.createElement("div");
-    box.className = "q";
-    box.innerHTML = `<h3>${idx+1}) ${qq.q}</h3>`;
-    const opts = document.createElement("div");
-
-    qq.opts.forEach((txt, oi)=>{
-      const opt = document.createElement("div");
-      opt.className = "opt";
-      opt.innerHTML = `<div class="bullet">${String.fromCharCode(65+oi)}</div><div>${txt}</div>`;
-
-      if(state.answers[idx].selected === oi){
-        opt.classList.add(oi === qq.a ? "good" : "bad");
-      }
-
-      opt.addEventListener("click", ()=>{
-        Array.from(opts.children).forEach(ch=>ch.classList.remove("good","bad"));
-
-        state.answers[idx].selected = oi;
-        const ok = (oi === qq.a);
-        state.answers[idx].correct = ok;
-        opt.classList.add(ok ? "good" : "bad");
-
-        state.points = state.answers.filter(a=>a.correct).length;
-        $("#pts").textContent = String(state.points);
-
-        saveProgress(student, lesson.id, state.answers.map(a=>a.selected));
-        $("#saveBtn").disabled = false;
-        $("#clearBtn").disabled = false;
-        $("#localState").value = "✅ محفوظ";
-
-        if(!ok) playErrorBeep();
-        toast(ok ? "✅ إجابة صحيحة" : "🔔 إجابة خاطئة.. عدّليها");
-      });
-
-      opts.appendChild(opt);
-    });
-
-    box.appendChild(opts);
-    qs.appendChild(box);
-  });
-
-  $("#saveBtn").disabled = false;
-  $("#clearBtn").disabled = false;
-}
-
-$("#startBtn").addEventListener("click", async ()=>{
-  const student = $("#studentName").value.trim();
-  if(student.length < 6){ toast("اكتبي الاسم الثلاثي بشكل صحيح."); return; }
-
-  const lessonId = $("#lessonSelect").value;
-  const lesson = LESSONS.find(l=>l.id===lessonId);
-  renderLesson(student, lesson);
-
-  const uid = (crypto?.randomUUID) ? crypto.randomUUID() : String(Date.now());
-
-  await postJSON({
-    action:"login",
-    siteKey: SITE_KEY,
-    uid,
-    student,
-    lessonId: lesson.id,
-    lessonTitle: lesson.title,
-    ua: navigator.userAgent
-  });
-
-  toast("تم فتح الدرس ✅");
 });
-
-$("#saveBtn").addEventListener("click", async ()=>{
-  const student = $("#studentName").value.trim();
-  if(!student || !state.lesson){ toast("ابدئي الدرس أولاً."); return; }
-
-  const notAnswered = state.answers.some(a=>a.selected===null);
-  if(notAnswered){ toast("أجيبي على جميع الأسئلة ثم اعتمدي."); return; }
-
-  const ok = state.points;
-  const max = state.lesson.questions.length;
-  const bad = max - ok;
-  const pct = Math.round((ok/max)*100);
-
-  const uid = (crypto?.randomUUID) ? crypto.randomUUID() : String(Date.now());
-
-  await postJSON({
-    action:"result",
-    siteKey: SITE_KEY,
-    uid,
-    student,
-    lessonId: state.lesson.id,
-    lessonTitle: state.lesson.title,
-    ok, bad, pct
-  });
-
-  toast(`تم حفظ النتيجة في الشيت ✅ (${pct}%)`);
-
-  if(ok === max) celebrate(student, state.lesson.title);
-});
-
-$("#clearBtn").addEventListener("click", ()=>{
-  const student = $("#studentName").value.trim();
-  if(!student || !state.lesson) return;
-  if(!confirm("هل تريدين مسح حفظ هذا الدرس من هذا الجهاز؟")) return;
-  clearProgress(student, state.lesson.id);
-  toast("تم مسح الحفظ.");
-  renderLesson(student, state.lesson);
-});
-
-function refreshVisits(){
-  loadJSONP({action:"stats", siteKey: SITE_KEY}, (data)=>{
-    if(data && data.ok) $("#visits").textContent = String(data.totalVisits ?? "—");
-    else $("#visits").textContent = "—";
-  });
-}
-refreshVisits();
-postJSON({action:"visit", siteKey: SITE_KEY}).then(()=>setTimeout(refreshVisits, 700));
-
-(function init(){
-  if(!Array.isArray(LESSONS) || LESSONS.length===0){
-    toast("⚠️ لم يتم تحميل ملف الدروس lessons.js");
-    return;
-  }
-
-  fillLessons();
-
-  const d = new Date();
-  const top = d.toLocaleDateString("ar-SA",{weekday:"long",year:"numeric",month:"2-digit",day:"2-digit"});
-  $("#todayTop").textContent = top;
-  $("#today").textContent = top;
-
-  const url = new URL(location.href);
-  const s = url.searchParams.get("student") || "";
-  const l = url.searchParams.get("lesson") || "";
-
-  if(s) $("#studentName").value = s;
-  if(l && LESSONS.some(x=>x.id===l)) $("#lessonSelect").value = l;
-
-  updateStudentLink();
-
-  if(s && l){
-    const lesson = LESSONS.find(x=>x.id===l);
-    renderLesson(s, lesson);
-  }
-})();
 </script>
+
 </body>
 </html>
