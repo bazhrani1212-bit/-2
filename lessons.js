@@ -1040,3 +1040,17 @@ window.LESSONS = [
 }
 
 ];
+// ✅ تطبيق نموذج الإجابة من المستند على جميع الدروس
+(function applyAnswerKey(){
+  const KEY = [1, 2, 3, 0, 1]; // ب، ج، د، أ، ب
+
+  if (!window.LESSONS || !Array.isArray(window.LESSONS)) return;
+
+  window.LESSONS.forEach(lesson => {
+    if (!lesson || !Array.isArray(lesson.questions)) return;
+    lesson.questions.forEach((q, i) => {
+      if (!q) return;
+      q.a = KEY[i] ?? null;
+    });
+  });
+})();
